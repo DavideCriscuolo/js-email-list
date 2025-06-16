@@ -38,10 +38,10 @@ function generatedEmails() {
       });
   }
 }
-console.log(generatedEmails());
+generatedEmails();
 
 buttonEl.addEventListener("click", function () {
   ulEl.innerHTML = "";
 
-  console.log(generatedEmails());
+  generatedEmails();
 });
