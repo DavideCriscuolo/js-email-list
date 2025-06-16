@@ -1,6 +1,6 @@
 // creata variabile con endpoint
 const endpoint = "https://flynn.boolean.careers/exercises/api/random/mail";
-
+/* Verisone con nodi  
 const bodyEl = document.querySelector("body");
 
 // Creati elementi della pagina
@@ -28,7 +28,11 @@ divEL.appendChild(rowEl);
 rowEl.appendChild(colEl);
 colEl.appendChild(ulEl);
 rowEl.append(divBtnEl);
+*/
 
+/* Versione semplificata*/
+const buttonEl = document.querySelector("button");
+const ulEl = document.querySelector("ul");
 // Creata Funzione per generare email all'interno della lista
 function generatedEmails() {
   for (let i = 1; i <= 10; i++) {
