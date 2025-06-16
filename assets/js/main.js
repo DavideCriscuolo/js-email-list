@@ -45,7 +45,7 @@ function generatedEmails() {
 }
 generatedEmails();
 
-// creato evento al cliclk per far svuotare il contenitore e ripopolare tramite la funzione crata prima
+// creato evento al click per far svuotare il contenitore e ripopolare tramite la funzione crata prima
 buttonEl.addEventListener("click", function () {
   ulEl.innerHTML = "";
 
