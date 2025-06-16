@@ -8,16 +8,18 @@ const ulEl = document.createElement("ul");
 const TitleSiteEl = document.createElement("h1");
 const divBtnEl = document.createElement("div");
 const buttonEl = document.createElement("button");
-buttonEl.classList.add("btn", "btn-success", "btn-sm");
+bodyEl.appendChild(divEL);
+buttonEl.classList.add("btn", "btn-success", "btn-sm", "my-2");
 buttonEl.innerHTML = "Genera";
 divBtnEl.appendChild(buttonEl);
-bodyEl.appendChild(divEL);
+
 TitleSiteEl.innerHTML = "Generatore Email";
 TitleSiteEl.classList.add("text-center", "my-5");
 divEL.appendChild(TitleSiteEl);
 divEL.classList.add("container", "my-5");
 rowEl.classList.add("row");
 colEl.classList.add("col");
+ulEl.classList.add("list-group");
 divEL.appendChild(rowEl);
 rowEl.appendChild(colEl);
 colEl.appendChild(ulEl);
@@ -27,6 +29,7 @@ function generatedEmails() {
   for (let i = 1; i <= 10; i++) {
     const liEl = document.createElement("li");
     ulEl.appendChild(liEl);
+    liEl.classList.add("list-group-item");
     fetch(endpoint)
       .then((response) => response.json())
       .then((data) => {
