@@ -23,20 +23,7 @@ rowEl.appendChild(colEl);
 colEl.appendChild(ulEl);
 rowEl.append(divBtnEl);
 
-for (let i = 1; i <= 10; i++) {
-  const liEl = document.createElement("li");
-  ulEl.appendChild(liEl);
-  fetch(endpoint)
-    .then((response) => response.json())
-    .then((data) => {
-      let email = data.response;
-      liEl.innerHTML = email;
-    });
-}
-
-buttonEl.addEventListener("click", function () {
-  ulEl.innerHTML = "";
-
+function generatedEmails() {
   for (let i = 1; i <= 10; i++) {
     const liEl = document.createElement("li");
     ulEl.appendChild(liEl);
@@ -47,4 +34,11 @@ buttonEl.addEventListener("click", function () {
         liEl.innerHTML = email;
       });
   }
+}
+console.log(generatedEmails());
+
+buttonEl.addEventListener("click", function () {
+  ulEl.innerHTML = "";
+
+  console.log(generatedEmails());
 });
